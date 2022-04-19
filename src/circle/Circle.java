@@ -1,19 +1,27 @@
 package circle;
 
 public class Circle {
-    float perimetro;
-    float area;
-    float radius;
+
+    private float radius;
+
+    public Circle() {
+
+    }
 
     Circle(float radius){
         this.radius = radius;
     }
 
-    public void calcular(){
-        perimetro = (float) (2 * Math.PI * radius);
-        area = (float) (Math.PI*Math.pow(radius,2));
+    public double area(float radius) {
+        return Math.PI * this.radius * this.radius;
+    }
 
-        System.out.println(perimetro);
-        System.out.println(area);
+    public double circumference(float radius) {
+        return Math.PI * this.radius *2;
+    }
+    public void main(String[] args) {
+        Circle c = new Circle();
+        System.out.println("Area do circulo: " + c.area(radius));
+        System.out.println("Circumferencia do circulo: " + c.circumference(radius));
     }
 }

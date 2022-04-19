@@ -9,10 +9,18 @@ public class Main {
 
         var scanner = new Scanner(System.in);
         System.out.println("Entre com o raio do circulo.");
-        float input = Float.parseFloat(scanner.next());
-        radius = input;
+        radius = Float.parseFloat(scanner.next());
 
-        Circle calc = new Circle(radius);
-        calc.calcular();
+        Circle calc = new Circle();
+        calc.area(radius);
+        calc.circumference(radius);
+
+        Circle calc1 = new Circle(2);
+
+        System.out.println(calc.area(radius));
+        System.out.println(calc.circumference(radius));
+
+        System.out.println(calc1.area(radius));
+        System.out.println(calc1.circumference(radius));
     }
 }
